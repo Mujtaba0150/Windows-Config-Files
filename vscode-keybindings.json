@@ -1,0 +1,23 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "ctrl+shift+r",
+        "command": "workbench.action.tasks.runTask",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+d",
+        "command": "workbench.action.debug.selectandstart",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+g",
+        "command": "workbench.view.scm",
+        "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
+    },
+    {
+        "key": "ctrl+shift+g g",
+        "command": "-workbench.view.scm",
+        "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
+    },
+]

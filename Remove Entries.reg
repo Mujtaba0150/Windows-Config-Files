@@ -1,0 +1,64 @@
+Windows Registry Editor Version 5.00
+
+; Removing "Pin to Start Screen" context menu handlers for various file types
+[-HKEY_CLASSES_ROOT\exefile\shellex\ContextMenuHandlers\PintoStartScreen]  ; Removes "Pin to Start" for executables
+[-HKEY_CLASSES_ROOT\Folder\ShellEx\ContextMenuHandlers\PintoStartScreen]   ; Removes "Pin to Start" for folders
+[-HKEY_CLASSES_ROOT\Microsoft.Website\shellex\ContextMenuHandlers\PintoStartScreen]  ; Removes "Pin to Start" for websites
+[-HKEY_CLASSES_ROOT\mscfile\shellex\ContextMenuHandlers\PintoStartScreen]  ; Removes "Pin to Start" for .msc files
+
+; Blocking "Pin to Start Screen" and other shell extensions
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Shell Extensions\Blocked]
+"{470C0EBD-5D73-4d58-9CED-E91E22E23282}"="Pin to Start"  ; Blocks the "Pin to Start" shell extension
+"{CA6CC9F1-867A-481E-951E-A28C5E4F01EA}"="Edit in Notepad"  ; Blocks the "Edit in Notepad" shell extension
+"{1FA0E654-C9F2-4A1F-9800-B9A75D744B00}"="Move to Onedrive"  ; Blocks the "Move to OneDrive" shell extension
+"{7AD84985-87B4-4a16-BE58-8B72A5B390F7}"="Cast to Device"  ; Blocks "Cast to Device" shell extension
+"{e2bf9676-5f8f-435c-97eb-11607a5bedf7}"="Share"  ; Blocks the "Share" shell extension
+
+; Removing "Library Location" context menu handlers
+[-HKEY_CLASSES_ROOT\Folder\ShellEx\ContextMenuHandlers\Library Location]   ; Removes "Library Location" for folders
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\ShellEx\ContextMenuHandlers\Library Location]  ; Removes "Library Location" for system-for all filesystem objects
+
+[-HKEY_CLASSES_ROOT\AllFilesystemObjects\shellex\ContextMenuHandlers\ModernSharing]  ; Removes "Share" for all filesystem objects
+[-HKEY_CLASSES_ROOT\AllFilesystemObjects\shellex\ContextMenuHandlers\{596AB062-B4D2-4215-9F74-E9109B0A8153}]  ; Removes "Share" for filesystem objects
+[-HKEY_CLASSES_ROOT\CLSID\{450D8FBA-AD25-11D0-98A8-0800361B1103}\shellex\ContextMenuHandlers\{596AB062-B4D2-4215-9F74-E9109B0A8153}]  ; Removes "Share" for specific CLSIDs
+[-HKEY_CLASSES_ROOT\Directory\shellex\ContextMenuHandlers\{596AB062-B4D2-4215-9F74-E9109B0A8153}]            ; Removes "Share" for directories
+[-HKEY_CLASSES_ROOT\Drive\shellex\ContextMenuHandlers\{596AB062-B4D2-4215-9F74-E9109B0A8153}]                ; Removes "Share" for drives
+
+; Removing "Send To" context menu handlers
+[-HKEY_CLASSES_ROOT\AllFilesystemObjects\shellex\ContextMenuHandlers\SendTo]         ; Removes "Send To" for all filesystem objects
+[-HKEY_CLASSES_ROOT\UserLibraryFolder\shellex\ContextMenuHandlers\SendTo]            ; Removes "Send To" for user library folders
+
+[-HKEY_CLASSES_ROOT\*\shell\pintohomefile]         ; Removes "Pin to Home" for files
+[-HKEY_CLASSES_ROOT\AllFilesystemObjects\shell\pintohome]  ; Removes "Pin to Home" for filesystem objects
+[-HKEY_CLASSES_ROOT\Drive\shell\pintohome]         ; Removes "Pin to Home" for drives
+[-HKEY_CLASSES_ROOT\Folder\shell\pintohome]        ; Removes "Pin to Home" for folders
+[-HKEY_CLASSES_ROOT\Network\shell\pintohome]       ; Removes "Pin to Home" for network locations
+
+; Removing "Sharing" context menu handlers
+[-HKEY_CLASSES_ROOT\*\shellex\ContextMenuHandlers\Sharing]                         ; Removes "Sharing" for all files
+[-HKEY_CLASSES_ROOT\Directory\Background\shellex\ContextMenuHandlers\Sharing]      ; Removes "Sharing" for directory backgrounds
+[-HKEY_CLASSES_ROOT\Directory\shellex\ContextMenuHandlers\Sharing]                 ; Removes "Sharing" for directories
+[-HKEY_CLASSES_ROOT\Drive\shellex\ContextMenuHandlers\Sharing]                     ; Removes "Sharing" for drives
+[-HKEY_CLASSES_ROOT\LibraryFolder\background\shellex\ContextMenuHandlers\Sharing]  ; Removes "Sharing" for library folders
+[-HKEY_CLASSES_ROOT\UserLibraryFolder\shellex\ContextMenuHandlers\Sharing]         ; Removes "Sharing" for user library folders
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer]
+"NoCustomizeThisFolder"=dword:00000001  ; Removes "Customise" from context menu handlers in Explorer
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
+"ConsentPromptBehaviorAdmin"=dword:00000001  ; Maximum UAC prompts for admins
+"ConsentPromptBehaviorUser"=dword:00000001  ; Maximum UAC prompts for users
+
+[HKEY_CURRENT_USER\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32]
+@=""  ; Enabling legacy right-click menu
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Search]
+"BingSearchEnabled"=dword:00000000  ; Disables Bing search in the Start Menu
+"CortanaConsent"=dword:00000000    ; Disables Cortana functionality
+
+[-HKEY_CLASSES_ROOT\*\shellex\ContextMenuHandlers\EPP]        ; Removes "Scan with Microsoft Defender" for all files
+[-HKEY_CLASSES_ROOT\Directory\shellex\ContextMenuHandlers\EPP]  ; Removes "Scan with Microsoft Defender" for directories
+[-HKEY_CLASSES_ROOT\Drive\shellex\ContextMenuHandlers\EPP]     ; Removes "Scan with Microsoft Defender" for drives
+
+[-HKEY_CLASSES_ROOT\exefile\shellex\ContextMenuHandlers\Compatibility]  ; Removes "Compatibility" for executable files
+[-HKEY_CLASSES_ROOT\lnkfile\shellex\ContextMenuHandlers\Compatibility]  ; Removes "Compatibility" for shortcut files
