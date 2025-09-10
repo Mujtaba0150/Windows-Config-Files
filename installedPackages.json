@@ -1,0 +1,82 @@
+[
+	{
+		"Name": "scrcpy",
+		"Id": "Genymobile.scrcpy"
+	},
+	{
+		"Name": "Git",
+		"Id": "Git.Git"
+	},
+	{
+		"Name": "FFmpeg",
+		"Id": "Gyan.FFmpeg"
+	},
+	{
+		"PackageName": "GestureSign",
+		"PackageIdentifier": "TransposonY.GestureSign"
+	},
+	{
+		"Name": "yt-dlp",
+		"Id": "yt-dlp.yt-dlp"
+	},
+	{
+		"Name": "WinRAR (64-bit)",
+		"Id": "RARLab.WinRAR"
+	},
+	{
+		"Name": "Microsoft Visual Studio Code Insiders",
+		"Id": "Microsoft.VisualStudioCode.Insiders"
+	},
+	{
+		"Name": "Cloudflare WARP",
+		"Id": "Cloudflare.Warp"
+	},
+	{
+		"Name": "Google Chrome",
+		"Id": "Google.Chrome"
+	},
+	{
+		"Name": "Oracle VirtualBox",
+		"Id": "Oracle.VirtualBox"
+	},
+	{
+		"Name": "PowerShell 7-x64",
+		"Id": "Microsoft.PowerShell"
+	},
+	{
+		"Name": "PowerToys (Preview) x64",
+		"Id": "Microsoft.PowerToys"
+	},
+	{
+		"Name": "Beeper",
+		"Id": "Beeper.Beeper"
+	},
+	{
+		"Name": "Proton Pass",
+		"Id": "Proton.ProtonPass"
+	},
+	{
+		"Name": "MSYS2",
+		"Id": "MSYS2.MSYS2"
+	},
+	{
+		"Name": "Python (64-bit)",
+		"Id": "Python.Python.3.13"
+	},
+	{
+		"Name": "Ambie",
+		"Id": "JeniusApps.Ambie"
+	},
+	{
+		"Name": "Command Palette - VS Code",
+		"Id": "JonahFintzDEV.CommandPalette-VSCode"
+	},
+	{
+		"Name": "Windows Terminal",
+		"Id": "Microsoft.WindowsTerminal"
+	},
+	{
+		"Name": "Windows Subsystem for Linux",
+		"Id": "Microsoft.WSL"
+	}
+]

@@ -1,0 +1,21 @@
+(defcfg
+	process-unmapped-keys yes
+)
+
+(defsrc
+	;; MetaLeft
+	ralt
+	CapsLock
+)
+
+(defalias
+	win-mod (tap-hold-release 200 200 C-A-Space MetaLeft)
+	CapsLock-mod bks
+	;; CapsLock-mod (tap-hold-release 200 200 bks lalt)
+
+)
+
+(deflayer base
+	@win-mod
+    @CapsLock-mod
+)

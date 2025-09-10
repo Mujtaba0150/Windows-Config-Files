@@ -1,4 +1,5 @@
 {
+    // Editor Configuration
     "editor.formatOnType": false,
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
@@ -10,25 +11,12 @@
     "editor.guides.highlightActiveIndentation": "always",
     "editor.indentSize": "tabSize",
     "editor.tabSize": 4,
-    "files.autoSave": "afterDelay",
-    "files.trimFinalNewlines": true,
-    "terminal.integrated.profiles.windows": {
-        "PowerShell 7": {
-            "path": "D:\\Apps\\Powershell 7.0\\7\\pwsh.exe",
-            "icon": "terminal-powershell"
-        }
-    },
-    "terminal.integrated.defaultProfile.windows": "PowerShell 7",
-    "workbench.editorAssociations": {
-        "git-rebase-todo": "default"
-    },
-    "workbench.startupEditor": "none",
-    "workbench.colorTheme": "Visual Studio Dark",
-    "workbench.sideBar.location": "right",
-    "workbench.activityBar.location": "top",
-    "workbench.settings.applyToAllProfiles": [
-        "inline-bookmarks.default.words.red"
-    ],
+    // C/C++ Extension Configuration
+    "C_Cpp.default.cppStandard": "c++20",
+    "C_Cpp.default.compilerPath": "D:/Apps/MSYS2/ucrt64/bin/g++.exe",
+    "C_Cpp.formatting": "vcFormat",
+    "C_Cpp.autocompleteAddParentheses": true,
+    "C_Cpp.intelliSenseUpdateDelay": 500,
     "C_Cpp.vcFormat": {
         "indent": {
             "caseLabels": true,
@@ -63,6 +51,69 @@
             "withinParameterListParentheses": false
         }
     },
+    // Terminal Settings
+    "terminal.integrated.profiles.windows": {
+        "PowerShell 7": {
+            "path": "D:/Apps/Powershell 7.0/7/pwsh.exe",
+            "args": [
+                "-NoExit",
+                "-Command",
+                "Set-PSReadLineOption -HistorySaveStyle SaveNothing"
+            ],
+            "icon": "terminal-powershell"
+        }
+    },
+    "terminal.integrated.defaultProfile.windows": "PowerShell 7",
+    // Workbench Appearance
+    "workbench.startupEditor": "none",
+    "workbench.colorTheme": "Visual Studio Dark",
+    "workbench.sideBar.location": "right",
+    "workbench.activityBar.location": "top",
+    "workbench.editorAssociations": {
+        "git-rebase-todo": "default"
+    },
+    "workbench.settings.applyToAllProfiles": [
+        "inline-bookmarks.default.words.red"
+    ],
+    // Git and GitLens Settings
+    "git.autofetch": true,
+    "git.openRepositoryInParentFolders": "always",
+    "git.confirmSync": false,
+    "gitlens.ai.experimental.model": "openai:gpt-4o",
+    "gitlens.views.scm.grouped.views": {
+        "commits": true,
+        "branches": true,
+        "remotes": true,
+        "stashes": true,
+        "tags": true,
+        "worktrees": true,
+        "contributors": true,
+        "repositories": false,
+        "searchAndCompare": true,
+        "launchpad": false
+    },
+    // File Handling
+    "files.autoSave": "afterDelay",
+    "files.trimFinalNewlines": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+    // Live Server
+    "liveServer.settings.donotVerifyTags": true,
+    // Python
+    "python.createEnvironment.trigger": "off",
+    // Dart/Flutter
+    "dart.openDevTools": "flutter",
+    // VS Code Edge DevTools
+    "vscode-edge-devtools.webhintInstallNotification": true,
+    "vscode-edge-devtools.headless": true,
+    // CMake Tools
+    "cmake.pinnedCommands": [
+        "workbench.action.tasks.configureTaskRunner",
+        "workbench.action.tasks.runTask"
+    ],
+    "cmake.showOptionsMovedNotification": false,
+    "cmake.showConfigureWithDebuggerNotification": false,
+    "cmake.configureOnOpen": false,
+    // Better Comments Plugin
     "better-comments.tags": [
         {
             "tag": "!",
@@ -110,38 +161,21 @@
             "italic": false
         }
     ],
-    "github.copilot.editor.enableAutoCompletions": true,
-    "inline-bookmarks.default.words.red": "//!",
-    "diffEditor.ignoreTrimWhitespace": false,
-    "cmake.pinnedCommands": [
-        "workbench.action.tasks.configureTaskRunner",
-        "workbench.action.tasks.runTask"
-    ],
-    "cmake.showOptionsMovedNotification": false,
-    "cmake.showConfigureWithDebuggerNotification": false,
-    "cmake.configureOnOpen": false,
-    "git.autofetch": true,
-    "git.openRepositoryInParentFolders": "always",
-    "vscode-edge-devtools.webhintInstallNotification": true,
-    "gitlens.ai.experimental.model": "openai:gpt-4o",
-    "git.confirmSync": false,
-    "vscode-edge-devtools.headless": true,
+    // VSCode Kanata
+    "vscode-kanata.localKeysVariant": "deflocalkeys-win",
     "editor.wordWrap": "on",
-    "gitlens.views.scm.grouped.views": {
-        "commits": true,
-        "branches": true,
-        "remotes": true,
-        "stashes": true,
-        "tags": true,
-        "worktrees": true,
-        "contributors": true,
-        "repositories": false,
-        "searchAndCompare": true,
-        "launchpad": false
+    "diffEditor.wordWrap": "on",
+    "editor.wordWrapColumn": 1,
+    "dart.debugExternalPackageLibraries": false,
+    "dart.debugSdkLibraries": false,
+    "workbench.panel.showLabels": false,
+    "terminal.integrated.smoothScrolling": true,
+    // Inline Bookmarks
+    "inline-bookmarks.default.words.red": "!:",
+    "inline-bookmarks.expert.custom.styles": {
+        "red": {
+            "gutterIconColor": "#FF2D00"
+        }
     },
-    "liveServer.settings.donotVerifyTags": true,
-    "C_Cpp.default.cppStandard": "c++23",
-    "python.createEnvironment.trigger": "off",
-    "dart.openDevTools": "flutter",
-    "C_Cpp.formatting": "vcFormat"
+    "python.defaultInterpreterPath": "c:\\Users\\mujta\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
 }
