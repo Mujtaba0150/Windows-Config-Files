@@ -5,35 +5,39 @@ After making your changes, type "Reload custom CSS" in the command bar
 To open dev tools, open the command bar and type "open console"
 */
 
-/* Hide account useless switcher */
-.account-switcher {
+/* Hide useless groups in quick access  */
+#root>div>div.left>div.threads-list-container>div.account-switcher>div.filters-pane-list>div.accounts>div:nth-child(n+5) {
 	display: none;
 }
 
-/* Force sidebar into floating behavior*/
-.left .threads-list-container {
+/* Change account-switcher colour to match the background and made sure account switcher appears below DMs panel */
+.account-switcher {
+	background-color: #222222;
+	z-index: 1001;
+}
+
+/* Force sidebar into floating behavior */
+.threads.redacted-region {
 	position: absolute !important;
 	top: 0 !important;
 	left: 0 !important;
 	height: 100% !important;
-	transform: translateX(calc(-100% + 15px)) !important;
+	transform: translateX(calc(-100% + 5px)) !important;
 	background-color: transparent !important;
-	padding-right: 15px !important;
+	padding-right: 6px !important;
 	transition: transform .15s ease-in-out 50ms, box-shadow .15s ease-in-out 50ms, background-color 0ms ease-in-out .15s !important;
 	z-index: 1000 !important;
 	pointer-events: none !important;
 	opacity: 1 !important;
 }
 
-/* Show sidebar fully on hover */
-.left:hover .threads-list-container {
+/* Show sidebar fully on hover  */
+.left:hover .threads.redacted-region {
 	transform: translateX(0) !important;
+	padding-left: var(--account-switcher-width);
+	width: 320px !important;
 	background-color: var(--left-pane-bg) !important;
 	box-shadow: 2px 0 6px rgba(0, 0, 0, 0.2) !important;
 	pointer-events: auto !important;
-}
-
-/* Force show left border padding */
-.right-wrapper .right {
-	margin: var(--frame-gap)
+	z-index: 1000;
 }
